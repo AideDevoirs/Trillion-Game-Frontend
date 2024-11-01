@@ -1,54 +1,93 @@
 .sidebar {
-    width: 250px;
-    background-color: #2d2d2d;
-    color: #ffffff;
-    height: 100vh;
+  width: 20px;
+  background-color: #ffffff;
+  color: #000000;
+  height: 90%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: 12px;
+  margin-bottom: 2%;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.sidebar-logo {
+  color: red;
+  font-size: 100%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.sidebar-link {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+.sidebar-link:hover {
+  background-color: #3e3e3e;
+  border-radius: 5px;
+  transform: scale(1.1);
+}
+
+/* Styles pour écran < 1000px */
+@media (max-width: 1284px) {
+  .sidebar {
+    display: none; /* Cache la sidebar par défaut */
     position: fixed;
-    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: 10;
+    padding-top: 20px;
+    border-radius: 0;
+  }
+
+  .sidebar.open {
+    display: flex; /* Affiche la sidebar en plein écran */
     flex-direction: column;
-    padding: 20px;
   }
-  
-  .sidebar-logo {
+
+  .hamburger {
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
     font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    padding: 15px 0;
+    color: #000;
+    z-index: 20;
   }
-  
-  .sidebar-menu {
-    list-style-type: none;
-    padding: 0;
+
+  .sidebar-logo {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
   }
-  
+
   .sidebar-item {
-    margin: 15px 0;
+    margin: 20px 0;
   }
-  
-  .sidebar-link {
-    color: inherit;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-  }
-  
-  .sidebar-link:hover {
-    background-color: #3e3e3e;
-    border-radius: 5px;
-    padding: 10px;
-  }
-  
-  .sidebar-title {
-    margin-left: 10px;
-    font-size: 16px;
-  }
-  @media (max-width: 768px) {
-    .sidebar {
-      width: 80px;
-    }
-  
-    .sidebar-title {
-      display: none;
-    }
-  }
-  
+}

@@ -1,10 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Sidebar from '../src/Sidebar/Sidebar'; // Assure-toi que le chemin est correct
 
 function App() {
   return (
     <div className="App">
+      <Sidebar />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
